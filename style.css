@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+button {
+    background-color: unset;
+    border: unset;
+    padding: 0px;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    text-decoration: underline;
+    padding: 20px;
+}
+
+img {
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.list-monument {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.list-monument div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-monument img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 10px 30px;
+}
+
+.description {
+    width: 100%;
+    height: 200px;
+    background-color: #1E1E1E;
+    padding: 20px;
+}
