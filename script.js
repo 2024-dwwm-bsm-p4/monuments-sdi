@@ -28,6 +28,16 @@ const descriptionMonuments = [
 }
 ];
 
+function contentSection(i) {
+    return "<h1>" + descriptionMonuments[i]["nom"] + "</h1>" +
+            "<h3>" + descriptionMonuments[i]["lieu"] + "</h3>" +
+            "<p>" + descriptionMonuments[i]["description"] + "</p>" +
+            "<div class='map'>" +
+                "<img src='images/carte_france.webp' alt=''>" +
+                "<img class='pin' src='images/pin.svg' alt=''>" +
+            "</div>";
+}
+
 boutonsMonuments.forEach(bouton => {
     bouton.addEventListener("click", function() {
 
@@ -48,10 +58,22 @@ boutonsMonuments.forEach(bouton => {
             imageClique.classList.remove('grayscale');
         }
 
-        console.log(imageClique.dataset.id);
-
-        descriptionSection.innerHTML = "<h1>" + descriptionMonuments[1]["nom"] + "</h1>" +
-        "<h3>" + descriptionMonuments[1]["lieu"] + "</h3>" +
-        "<p>" + descriptionMonuments[1]["description"] + "</p>";
+        switch(imageClique.dataset.id) {
+            case '1':
+                descriptionSection.innerHTML = contentSection(0);
+            break;
+            case '2':
+                descriptionSection.innerHTML = contentSection(1);
+            break;
+            case '3':
+                descriptionSection.innerHTML = contentSection(2);
+            break;
+            case '4':
+                descriptionSection.innerHTML = contentSection(3);
+            break;
+            case '5':
+                descriptionSection.innerHTML = contentSection(4);
+            break;
+        }
     });
 });
