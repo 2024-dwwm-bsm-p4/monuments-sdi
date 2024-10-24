@@ -39,9 +39,11 @@ const descriptionMonuments = [
 ];
 
 function contentSection(i) {
-    return "<h1>" + descriptionMonuments[i]["nom"] + "</h1>" +
-            "<h2>" + descriptionMonuments[i]["lieu"] + "</h2>" +
-            "<p>" + descriptionMonuments[i]["description"] + "</p>" +
+    return "<div class='animation'>" +
+                "<h1>" + descriptionMonuments[i]["nom"] + "</h1>" +
+                "<h2>" + descriptionMonuments[i]["lieu"] + "</h2>" +
+                "<p>" + descriptionMonuments[i]["description"] + "</p>" +
+            "</div>" +
             "<div class='map-containeur'" +
                 "<div class='map'>" +
                     "<img src='images/carte_france.webp' alt=''>" +
@@ -69,6 +71,8 @@ boutonsMonuments.forEach(bouton => {
         if (imageClique) {
             imageClique.classList.remove('grayscale');
         }
+
+        descriptionSection.innerHTML = '';
 
         switch(imageClique.dataset.id) {
             case '1':
